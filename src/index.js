@@ -1,36 +1,35 @@
-
-exports.min = function min (array) {
-     if ( !Array.isArray(array) || !array.length){
-    return 0;
-  }
-  let min = array[0];
-  for (let i = 1; i < array.length; i++) {
-    if (array[i] < min) {
-      min = array[i];
+exports.min = function min(array) {
+    if ((!array) || (array.length == 0)) {
+        return 0;
     }
-  }
-  return min;
-}
-
-exports.max = function max (array) {
-     if ( !Array.isArray(array) || !array.length){
-    return 0;
-  }
-  let max = array[0];
-  for (let i = 1; i < array.length; i++) {
-    if (array[i] > max) {
-      max = array[i];
+    let min = array[0];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] < min) {
+            min = array[i];
+        }
     }
-  }
-  return max;
-}
+    return min;
+};
+
+exports.max = function max(array) {
+    if ((!array) || (array.length == 0)) {
+        return 0;
+    }
+    let max = array[0];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > max) {
+            max = array[i];
+        }
+    }
+    return max;
+};
 
 exports.avg = function avg (array) {
-     if ( !Array.isArray(array) || !array.length){
-    return 0;
-  }
+  if ((!array) || (array.length == 0)) {
+        return 0;
+    }
  let summ = 0;
-  for (let i = 1; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
    summ+=array[i];
   }
     let avg=summ/array.length;
